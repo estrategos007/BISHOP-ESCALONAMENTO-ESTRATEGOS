@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BarChart3, Building2, Calendar, Clock, Users, UserCheck } from "lucide-react";
+import { BarChart3, Building2, Calendar, Clock, Users, UserCheck, TrendingUp } from "lucide-react";
 import { Employee } from "@/types/employee";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
@@ -43,54 +43,66 @@ export function Summary({ employees }: SummaryProps) {
       </div>
 
       {/* Overview Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <Card>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in">
+        <Card className="glass glass-dark shadow-modern-md hover:shadow-glow transition-all duration-300 hover:scale-105">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total de Colaboradores</CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
+            <div className="p-2 rounded-lg bg-gradient-primary">
+              <Users className="h-4 w-4 text-primary-foreground" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{totalEmployees}</div>
-            <p className="text-xs text-muted-foreground">
+            <div className="text-3xl font-bold text-primary">{totalEmployees}</div>
+            <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+              <TrendingUp className="h-3 w-3" />
               Colaboradores cadastrados
             </p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="glass glass-dark shadow-modern-md hover:shadow-glow transition-all duration-300 hover:scale-105">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Funções</CardTitle>
-            <UserCheck className="h-4 w-4 text-muted-foreground" />
+            <div className="p-2 rounded-lg bg-gradient-accent">
+              <UserCheck className="h-4 w-4 text-accent-foreground" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{uniqueRoles.length}</div>
-            <p className="text-xs text-muted-foreground">
+            <div className="text-3xl font-bold text-accent">{uniqueRoles.length}</div>
+            <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+              <TrendingUp className="h-3 w-3" />
               Funções diferentes
             </p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="glass glass-dark shadow-modern-md hover:shadow-glow transition-all duration-300 hover:scale-105">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Setores</CardTitle>
-            <Building2 className="h-4 w-4 text-muted-foreground" />
+            <div className="p-2 rounded-lg bg-gradient-secondary">
+              <Building2 className="h-4 w-4 text-secondary-foreground" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{uniqueSectors.length}</div>
-            <p className="text-xs text-muted-foreground">
+            <div className="text-3xl font-bold text-foreground">{uniqueSectors.length}</div>
+            <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+              <TrendingUp className="h-3 w-3" />
               Setores ativos
             </p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="glass glass-dark shadow-modern-md hover:shadow-glow transition-all duration-300 hover:scale-105">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Empresas</CardTitle>
-            <Building2 className="h-4 w-4 text-muted-foreground" />
+            <div className="p-2 rounded-lg bg-gradient-secondary">
+              <Building2 className="h-4 w-4 text-secondary-foreground" />
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{uniqueCompanies.length}</div>
-            <p className="text-xs text-muted-foreground">
+            <div className="text-3xl font-bold text-foreground">{uniqueCompanies.length}</div>
+            <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+              <TrendingUp className="h-3 w-3" />
               Empresas cadastradas
             </p>
           </CardContent>

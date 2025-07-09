@@ -2,112 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design system - Sistema de escalonamento e contabilização de horas
-Paleta profissional com azul corporativo e acentos verdes
+/* Design system moderno - Escalonamento e contabilização de horas
+Paleta moderna com gradientes e suporte a modo escuro/claro
 */
 
 @layer base {
   :root {
+    /* Light theme - Tema moderno com azul profundo e acentos vibrantes */
     --background: 0 0% 100%;
-    --foreground: 214 100% 15%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 214 100% 15%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 214 100% 15%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 214 100% 25%;
+    /* Primary - Azul moderno */
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 214 100% 20%;
+    --primary-hover: 221 83% 45%;
 
-    --secondary: 214 20% 95%;
-    --secondary-foreground: 214 100% 15%;
+    /* Secondary - Cinza suave */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 214 20% 97%;
-    --muted-foreground: 214 15% 45%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
 
-    --accent: 142 76% 35%;
+    /* Accent - Verde vibrante */
+    --accent: 142 71% 45%;
     --accent-foreground: 0 0% 100%;
-    --accent-hover: 142 76% 30%;
+    --accent-hover: 142 71% 37%;
 
-    --success: 142 76% 35%;
+    /* Success - Verde */
+    --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 48 100% 67%;
-    --warning-foreground: 214 100% 15%;
+    /* Warning - Âmbar */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
 
+    /* Error - Vermelho */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 30% 88%;
-    --input: 214 30% 88%;
-    --ring: 214 100% 25%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
 
-    /* Time grid specific colors */
+    /* Time grid cores modernas */
     --grid-cell: 0 0% 100%;
-    --grid-cell-hover: 214 50% 96%;
-    --grid-cell-active: 142 76% 92%;
-    --grid-cell-selected: 142 76% 35%;
-    --grid-header: 214 100% 25%;
-    --grid-border: 214 30% 90%;
+    --grid-cell-hover: 221 40% 98%;
+    --grid-cell-active: 142 50% 95%;
+    --grid-cell-selected: 142 71% 45%;
+    --grid-header: 221 83% 53%;
+    --grid-border: 220 13% 91%;
 
-    --radius: 0.5rem;
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(221 83% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 14% 96%), hsl(220 13% 91%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 37%));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(142 71% 45%) 100%);
 
-    --sidebar-background: 0 0% 98%;
+    /* Shadows modernos */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 91% / 0.15);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 91% / 0.3), 0 2px 4px -1px hsl(220 13% 91% / 0.15);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 91% / 0.3), 0 4px 6px -2px hsl(220 13% 91% / 0.15);
+    --shadow-glow: 0 0 20px hsl(221 83% 53% / 0.3);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Dark theme - Tema escuro moderno */
+    --background: 222 84% 5%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 84% 5%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 84% 5%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary - Azul mais claro no escuro */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 221 83% 60%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    /* Secondary - Cinza escuro */
+    --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent - Verde mais vibrante */
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 142 71% 52%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Warning */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Error */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 221 83% 53%;
+
+    /* Time grid cores escuras */
+    --grid-cell: 217 33% 17%;
+    --grid-cell-hover: 217 33% 22%;
+    --grid-cell-active: 142 30% 25%;
+    --grid-cell-selected: 142 71% 45%;
+    --grid-header: 221 83% 53%;
+    --grid-border: 217 33% 22%;
+
+    /* Gradientes escuros */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(221 83% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 33% 17%), hsl(217 33% 22%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 37%));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(142 71% 45%) 100%);
+
+    /* Shadows escuros */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.25);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.25);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.25);
+    --shadow-glow: 0 0 20px hsl(221 83% 53% / 0.4);
   }
+
 }
 
 @layer base {
@@ -116,6 +147,31 @@ Paleta profissional com azul corporativo e acentos verdes
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer components {
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply dark:bg-black/20 dark:backdrop-blur-md dark:border-white/10;
+  }
+
+  /* Modern gradient backgrounds */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Enhanced shadows */
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
   }
 }

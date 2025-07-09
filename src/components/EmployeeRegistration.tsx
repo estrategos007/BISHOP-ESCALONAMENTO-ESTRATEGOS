@@ -88,18 +88,20 @@ export function EmployeeRegistration({ employees, onAddEmployee }: EmployeeRegis
   const roles = [...new Set(employees.map(emp => emp.role).filter(Boolean))];
 
   return (
-    <div className="space-y-6">
-      <Card>
-        <CardHeader>
+    <div className="space-y-6 animate-fade-in">
+      <Card className="glass glass-dark shadow-modern-md">
+        <CardHeader className="bg-gradient-primary text-primary-foreground rounded-t-lg">
           <CardTitle className="flex items-center gap-2">
-            <UserPlus className="h-5 w-5" />
+            <div className="p-2 rounded-lg bg-white/20">
+              <UserPlus className="h-5 w-5" />
+            </div>
             Cadastramento de Colaboradores
           </CardTitle>
-          <CardDescription>
+          <CardDescription className="text-primary-foreground/80">
             Preencha as informações do colaborador para registro no sistema
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="mt-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
@@ -233,7 +235,7 @@ export function EmployeeRegistration({ employees, onAddEmployee }: EmployeeRegis
               </div>
             </div>
 
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full bg-gradient-primary hover:bg-primary-hover shadow-glow transition-all duration-300 hover:scale-105">
               <Plus className="mr-2 h-4 w-4" />
               Cadastrar Colaborador
             </Button>

@@ -62,14 +62,16 @@ export function TimeGrid({ employees }: TimeGridProps) {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 animate-fade-in">
       <div className="flex items-center gap-2 mb-4">
-        <Clock className="h-5 w-5" />
-        <h2 className="text-lg font-semibold">Grades de Horário por Função</h2>
+        <div className="p-2 rounded-lg bg-gradient-primary text-primary-foreground shadow-glow">
+          <Clock className="h-5 w-5" />
+        </div>
+        <h2 className="text-xl font-semibold text-foreground">Grades de Horário por Função</h2>
       </div>
 
       {Object.entries(employeesByRole).map(([role, roleEmployees]) => (
-        <Card key={role} className="overflow-hidden">
+        <Card key={role} className="overflow-hidden glass glass-dark shadow-modern-lg hover:shadow-glow transition-all duration-300">
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
               <span>Função: {role}</span>
