@@ -2,39 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Design system - Sistema de escalonamento e contabilização de horas
+Paleta profissional com azul corporativo e acentos verdes
 */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 214 100% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 214 100% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 214 100% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 214 100% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 214 100% 20%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 214 20% 95%;
+    --secondary-foreground: 214 100% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 214 20% 97%;
+    --muted-foreground: 214 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 142 76% 35%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 142 76% 30%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 35%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --warning: 48 100% 67%;
+    --warning-foreground: 214 100% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 30% 88%;
+    --input: 214 30% 88%;
+    --ring: 214 100% 25%;
+
+    /* Time grid specific colors */
+    --grid-cell: 0 0% 100%;
+    --grid-cell-hover: 214 50% 96%;
+    --grid-cell-active: 142 76% 92%;
+    --grid-cell-selected: 142 76% 35%;
+    --grid-header: 214 100% 25%;
+    --grid-border: 214 30% 90%;
 
     --radius: 0.5rem;
 
